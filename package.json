@@ -1,0 +1,25 @@
+{
+  "name": "react-dragdrop",
+  "version": "1.0.0",
+  "description": "React DragDropMixin",
+  "main": "DragDropMixin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsh01/react-dragdrop.git"
+  },
+  "keywords": [
+    "react",
+    "drag",
+    "drop",
+    "javascript"
+  ],
+  "author": "Itay Shtekel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsh01/react-dragdrop/issues"
+  },
+  "homepage": "https://github.com/itsh01/react-dragdrop#readme"
+}
