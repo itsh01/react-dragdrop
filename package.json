@@ -24,5 +24,9 @@
   "homepage": "https://github.com/itsh01/react-dragdrop#readme",
   "dependencies": {
     "lodash.includes": "^3.1.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-umd": "^2.3.3"
   }
 }
