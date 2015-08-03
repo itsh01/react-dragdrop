@@ -16,7 +16,7 @@
     "drop",
     "javascript"
   ],
-  "author": "Itay Shtekel",
+  "author": "Itay Shtekel <Shtekel1@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/itsh01/react-dragdrop/issues"
