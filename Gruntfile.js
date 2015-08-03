@@ -15,7 +15,7 @@ module.exports = function (grunt) {
                     objectToExport: 'DragDropMixin',
                     amdModuleId: 'DragDropMixin',
                     deps: {
-                        'default': ['lodash.includes']
+                        'default': ['lodash']
                     }
                 }
             }
