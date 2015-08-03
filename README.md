@@ -32,3 +32,7 @@ When dropping an item
         drop: function (myItem) {} // Callback to execute when dropping
     };
 ```
+
+## License
+
+MIT. See LICENSE for more info.
