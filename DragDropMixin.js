@@ -1,5 +1,7 @@
 'use strict';
 
+var includes = require("lodash.includes");
+
 var DragDropMixin = {
     /*
      *  usage:
@@ -72,7 +74,7 @@ var DragDropMixin = {
             throw new Error('Must define drop function when using droppable');
         }
 
-        if (_.includes(acceptableDrops, passedObj.dropType)) {
+        if (includes(acceptableDrops, passedObj.dropType)) {
             this.dragDropData.drop(passedObj.data);
         }
 
