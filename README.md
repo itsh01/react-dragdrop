@@ -2,6 +2,13 @@
 
 A lightweight DragDropMixin for ReactJS components
 
+## Installation
+
+Simply download the package
+```
+npm install react-dragdrop --save
+```
+
 ## Usage
 
 * Include the mixin in the components
