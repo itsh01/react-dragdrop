@@ -4,7 +4,7 @@
   "description": "React DragDropMixin",
   "main": "DragDropMixin.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,9 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-umd": "^2.3.3"
+    "grunt-umd": "^2.3.3",
+    "jasmine": "^2.3.2",
+    "jsdom": "^3.1.2",
+    "react": "^0.13.3"
   }
 }
