@@ -1,6 +1,6 @@
 # React DragDropMixin 
 [![Build Status](https://travis-ci.org/itsh01/react-dragdrop.svg?branch=master)](https://travis-ci.org/itsh01/react-dragdrop)
-A lightweight DragDropMixin for ReactJS components
+> A lightweight DragDropMixin for ReactJS components
 
 ## Installation
 
