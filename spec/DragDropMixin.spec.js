@@ -106,4 +106,33 @@ describe('DragDropMixin', function () {
         expect(renderedDrop.state).not.toBeNull();
     });
 
+    it('should prevent drop functionality when the specific dropType is not included', function () {
+        var renderedDrag = TestUtils.renderIntoDocument(elementDrag);
+        var renderedDrop = TestUtils.renderIntoDocument(elementDrop);
+        var nodeDrag = renderedDrag.getDOMNode();
+        var nodeDrop = renderedDrop.getDOMNode();
+        var mockEvent = {
+            preventDefault: function () {},
+            dataTransfer: {
+                types: ["objtopass"],
+                setData: function () {},
+                getData: function () {
+                    return JSON.stringify({
+                        dropType: 'different',
+                        data: {
+                            test: true
+                        }
+                    });
+                }
+            }
+        };
+
+        nodeDrag.ondragstart(mockEvent);
+        nodeDrop.ondragover(mockEvent);
+        nodeDrop.ondrop(mockEvent);
+
+        expect(DragDropMixin.handleDrop).toHaveBeenCalled();
+        expect(renderedDrop.state).toBeNull();
+    });
+
 });
