@@ -56,13 +56,13 @@ var DragDropMixin = {
         this.dragDropData = this.dragDrop();
 
         if (this.isDroppable()) {
-            node.addEventListener('dragover', this.handleDragOver, this);
-            node.addEventListener('drop', this.handleDrop, this);
+            node.ondragover = this.handleDragOver;
+            node.ondrop = this.handleDrop;
         }
 
         if (this.isDraggable()) {
             node.draggable = true;
-            node.addEventListener('dragstart', this.handleDragStart, this);
+            node.ondragstart = this.handleDragStart;
         }
     },
     componentWillUnmount: function () {

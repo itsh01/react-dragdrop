@@ -14,16 +14,8 @@ describe('DragDropMixin', function () {
         elementDrop = null;
 
     beforeEach(function () {
-        //var html = '<html><body></body></html>';
-        //global.document = jsdom.jsdom(html);
-        //global.window = document.parentWindow;
-        //document.querySelector('body').addEventListener('click', function() {
-        //    console.log('clicked');
-        //});
 
-        //console.log(window);
-
-        //spyOn(DragDropMixin, 'handleDrop').and.callThrough();
+        spyOn(DragDropMixin, 'handleDrop').and.callThrough();
 
         var Comp = React.createClass({
             mixins: [DragDropMixin],
@@ -54,9 +46,8 @@ describe('DragDropMixin', function () {
                 var self = this;
                 return {
                     droppable: true,
-                    acceptableTypes: ['test'],
+                    acceptableDrops: ['test'],
                     drop: function (data) {
-                        console.log(123);
                         self.setState(data);
                     }
                 };
@@ -92,30 +83,26 @@ describe('DragDropMixin', function () {
         var nodeDrag = renderedDrag.getDOMNode();
         var nodeDrop = renderedDrop.getDOMNode();
         var mockEvent = {
-            //nativeEvent: {
-                dataTransfer: {
-                    types: ["objtopass"],
-                    setData: function () {},
-                    getData: function () {
-                        return JSON.parse({
-                            dropType: 'test',
-                            data: {
-                                test: true
-                            }
-                        });
-                    }
+            preventDefault: function () {},
+            dataTransfer: {
+                types: ["objtopass"],
+                setData: function () {},
+                getData: function () {
+                    return JSON.stringify({
+                        dropType: 'test',
+                        data: {
+                            test: true
+                        }
+                    });
                 }
-            //}
+            }
         };
 
-        //spyOn(rendered.dragDropData, 'drop').and.callThrough();
+        nodeDrag.ondragstart(mockEvent);
+        nodeDrop.ondragover(mockEvent);
+        nodeDrop.ondrop(mockEvent);
 
-        TestUtils.SimulateNative.dragStart(nodeDrag, mockEvent);
-        TestUtils.Simulate.dragOver(nodeDrop, mockEvent);
-        TestUtils.Simulate.drop(nodeDrop, mockEvent);
-
-        //expect(DragDropMixin.handleDrop).toHaveBeenCalled();
-        //expect(rendered.dragDropData.drop).toHaveBeenCalled();
+        expect(DragDropMixin.handleDrop).toHaveBeenCalled();
         expect(renderedDrop.state).not.toBeNull();
     });
 
