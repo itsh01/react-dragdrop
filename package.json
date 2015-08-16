@@ -29,7 +29,12 @@
     "grunt": "^0.4.5",
     "grunt-umd": "^2.3.3",
     "jasmine": "^2.3.2",
+    "jasmine-core": "^2.3.4",
     "jsdom": "^3.1.2",
+    "karma": "^0.13.9",
+    "karma-browserify": "^4.3.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
     "react": "^0.13.3"
   }
 }
