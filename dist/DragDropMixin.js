@@ -1,23 +1,21 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module unless amdModuleId is set
-    define('DragDropMixin', ["lodash"], function (a0) {
-      return (root['DragDropMixin'] = factory(a0));
+    define('DragDropMixin', [], function () {
+      return (root['DragDropMixin'] = factory());
     });
   } else if (typeof exports === 'object') {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like environments that support module.exports,
     // like Node.
-    module.exports = factory(require("lodash"));
+    module.exports = factory();
   } else {
-    root['DragDropMixin'] = factory(lodash);
+    root['DragDropMixin'] = factory();
   }
-}(this, function (lodash) {
+}(this, function () {
 
 
 'use strict';
-
-var _ = lodash;
 
 var DragDropMixin = {
     /*
@@ -91,7 +89,7 @@ var DragDropMixin = {
             throw new Error('Must define drop function when using droppable');
         }
 
-        if (_.includes(acceptableDrops, passedObj.dropType)) {
+        if (acceptableDrops.indexOf(passedObj.dropType) !== -1) {
             this.dragDropData.drop(passedObj.data);
         }
 

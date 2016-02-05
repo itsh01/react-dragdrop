@@ -22,9 +22,7 @@
     "url": "https://github.com/itsh01/react-dragdrop/issues"
   },
   "homepage": "https://github.com/itsh01/react-dragdrop#readme",
-  "dependencies": {
-    "lodash": "^3.10.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-umd": "^2.3.3",
