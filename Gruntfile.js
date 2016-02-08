@@ -13,10 +13,7 @@ module.exports = function (grunt) {
                     src: 'DragDropMixin.js',
                     dest: 'dist/DragDropMixin.js',
                     objectToExport: 'DragDropMixin',
-                    amdModuleId: 'DragDropMixin',
-                    deps: {
-                        'default': ['lodash']
-                    }
+                    amdModuleId: 'DragDropMixin'
                 }
             }
         }
