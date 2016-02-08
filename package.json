@@ -1,6 +1,6 @@
 {
   "name": "react-dragdrop",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "React DragDropMixin",
   "main": "DragDropMixin.js",
   "scripts": {
